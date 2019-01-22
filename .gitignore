@@ -1,4 +1,5 @@
 **/target/
 cc-web/src/main/web/dist/
 cc-web/src/main/web/node/
+cc-web/src/main/web/package-lock.json
 **/node_modules/
