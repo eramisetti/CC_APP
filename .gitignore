@@ -1,0 +1,4 @@
+**/target/
+cc-web/src/main/web/dist/
+cc-web/src/main/web/node/
+**/node_modules/
