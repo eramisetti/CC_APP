@@ -60,7 +60,7 @@
 			              <outputDirectory>${project.build.directory}/classes/resources/</outputDirectory >
 			              <resources>
 			                  <resource>
-			                      <directory>${project.parent.basedir}/cc-web/src/main/web/dist/np-app/</directory >
+			                      <directory>${project.parent.basedir}/cc-web/src/main/web/dist/ang7route/</directory >
 			                  </resource>
 			              </resources>
 			          </configuration>
