@@ -1,0 +1,2 @@
+insert into user values(1, 'EswarR', 'Ramisetti', 'e', 'e', 'eswar.ramisetti@medimpact.com', 'eswar.ramisetti@gmail.com','MedImpact','San Diego, CA, USA', false, false, 'Eswar', null, now(), null, true);
+insert into user_roles values('e', 'USER');

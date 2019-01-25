@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  *
  */
 @Controller
-@RequestMapping("/api/home")
+@RequestMapping("/")
 public class HomeController {
 	
 	@GetMapping
