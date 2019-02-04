@@ -1,20 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { HomeService } from './home.service';
+import { UserService } from './user.service';
 import { User } from '../model/user';
 
-
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-user',
+  templateUrl: './user.component.html',
+  styleUrls: ['./user.component.css']
 })
-export class HomeComponent implements OnInit {
+export class UserComponent implements OnInit {
 
     public user: User = new User();
     public useName = 'yes';
 
-  constructor(public homeService: HomeService, public router: Router) { }
+  constructor(public homeService: UserService, public router: Router) { }
 
   ngOnInit() {
   }

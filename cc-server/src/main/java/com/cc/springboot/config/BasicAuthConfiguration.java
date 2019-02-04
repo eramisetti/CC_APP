@@ -1,4 +1,4 @@
-package com.cc.springboot.config;
+/*package com.cc.springboot.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -32,3 +32,4 @@ public class BasicAuthConfiguration extends WebSecurityConfigurerAdapter {
 //          .and().httpBasic();
     }
 }
+*/

@@ -26,3 +26,5 @@ create table user(
 	CONSTRAINT user_cemail_unique UNIQUE (corp_email),
 	CONSTRAINT user_pemail_unique UNIQUE (personal_email)
 );
+
+CREATE SEQUENCE SEQ_user_id START WITH 100 INCREMENT BY 1;

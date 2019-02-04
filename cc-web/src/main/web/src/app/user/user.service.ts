@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 
 @Injectable()
-export class HomeService {
+export class UserService {
 
     constructor(public http: HttpClient) { }
 
@@ -18,6 +18,6 @@ export class HomeService {
             headers: httpHeaders
         };
 
-        return this.http.post<Boolean>('/api/login', data, options);
+        return this.http.post<Boolean>('/api/user/login', data, options);
     }
 }
