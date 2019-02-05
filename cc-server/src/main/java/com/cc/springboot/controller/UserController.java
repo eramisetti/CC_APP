@@ -6,9 +6,12 @@ package com.cc.springboot.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cc.springboot.dao.entity.User;
@@ -27,21 +30,22 @@ public class UserController {
 	@Autowired
 	UserService userService;
 	
-	@GetMapping(value = "/")
+	@RequestMapping(value = "/")
 	public String home() {
-		return "forward:/index.html";
+		return "index.html";
 	}
 	
+	
 	@PostMapping("/api/user/login")
-	public Boolean login(@RequestBody User user) {
+	public @ResponseBody ResponseEntity<Boolean> login(@RequestBody User user) {
 		logger.debug("Controller(): login(): Entry.");
-		return userService.login(user);
+		return new ResponseEntity<Boolean>(userService.login(user),HttpStatus.OK);
 	}
 	
 	@PostMapping("/api/user/register")
-	public User register(@RequestBody User user) {
+	public @ResponseBody ResponseEntity<User> register(@RequestBody User user) {
 		logger.debug("Controller(): register(): Entry.");
-		return userService.register(user);
+		return new ResponseEntity<User>(userService.register(user), HttpStatus.CREATED);
 	}
 
 }

@@ -10,7 +10,8 @@ import { User } from '../model/user';
 })
 export class UserComponent implements OnInit {
 
-    public user: User = new User();
+    public loginUser: User = new User();
+    public registerUser: User = new User();
     public useName = 'yes';
 
   constructor(public homeService: UserService, public router: Router) { }
@@ -19,8 +20,10 @@ export class UserComponent implements OnInit {
   }
 
  login() {
-    console.log('signin button click ' , this.user.userName, this.user.password);
-    this.homeService.login(this.user).subscribe(
+    console.log('signin button click ' , this.loginUser.userName, this.loginUser.password);
+    this.loginUser.corpEmail = this.loginUser.userName;
+    this.loginUser.peronsalEmail = this.loginUser.peronsalEmail;
+    this.homeService.login(this.loginUser).subscribe(
        ( res: Boolean) => {
             if (res) {
                 this.router.navigate(['student/list']);
@@ -29,11 +32,14 @@ export class UserComponent implements OnInit {
     );
   }
 
-   signup() {
-     console.log('signup button click');
-    // const obj = this.homeService.login(this.user);
-    // console.log('call completed');
-     this.router.navigate(['student/list']);
+   register() {
+     console.log('signup button click', this.registerUser);
+      this.homeService.register(this.registerUser).subscribe(
+        res => {
+          console.log(res);
+          this.router.navigate(['student/list']);
+        }
+      );
   }
 
 }

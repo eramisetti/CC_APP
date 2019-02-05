@@ -20,4 +20,17 @@ export class UserService {
 
         return this.http.post<Boolean>('/api/user/login', data, options);
     }
+
+     register(user: User): Observable<User> {
+        const data = JSON.stringify(user);
+        const httpHeaders = new HttpHeaders({
+            'Content-Type': 'application/json',
+            'Cache-Control': 'no-cache'
+        });
+        const options = {
+            headers: httpHeaders
+        };
+
+        return this.http.post<User>('/api/user/register', data, options);
+    }
 }

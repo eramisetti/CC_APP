@@ -26,7 +26,8 @@ public class UserService {
 	
 	public Boolean login(User user) {
 		logger.debug("inside login() ");
-		User result = userRepository.findByUserNameAndPassword(user.getUserName(), user.getPassword());
+//		User result = userRepository.findByUserNameAndPassword(user.getUserName(), user.getPassword());
+		User result = userRepository.findByCorpEmailOrPersonalEmailAndPassword(user.getCorpEmail(), user.getPersonalEmail(), user.getPassword());
 		if(result != null) {
 			logger.debug("Results " + result.getCorpEmail());
 			return true;
