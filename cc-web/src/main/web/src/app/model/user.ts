@@ -5,4 +5,5 @@ export class User {
     password: string;
     corpEmail: string;
     peronsalEmail: string;
+    retypepassword: string;
 }

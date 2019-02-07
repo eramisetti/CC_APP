@@ -1,17 +1,18 @@
 <div id="container">
   <div id="inner">
-
+<form>
     <div class="child">
-
       <div class="form-group required">
         <label for="exampleInputEmail1" class="control-label">Email address</label>
         <input [(ngModel)]="loginUser.userName" 
         type="email" 
+        pattern="[^ @]*@[^ @]*"
         class="form-control" 
         id="exampleInputEmail1"
         name="exampleInputEmail1"
         aria-describedby="emailHelp" 
         placeholder="Enter email"
+        required 
         >
         <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
       </div>
@@ -20,9 +21,8 @@
         <input [(ngModel)]="loginUser.password" type="password" class="form-control" id="exampleInputPassword1"  name="exampleInputPassword1" placeholder="Password">
       </div>
       <button type="submit" class="btn btn-primary" (click)="login()">Login</button>
-
     </div>
-
+</form>
     <div class="child-2">
       <div class="form-group">
         <label for="firstName">First Name</label>
@@ -51,7 +51,7 @@
 
       <div class="form-group">
         <label for="repwd">ReType Password</label>
-        <input type="password" [(ngModel)]="registerUser.password" class="form-control" id="repwd" placeholder="Re-Type Password">
+        <input type="password" [(ngModel)]="registerUser.retypepassword" class="form-control" id="repwd" placeholder="Re-Type Password">
       </div>
       <button type="button" class="btn btn-primary" (click)="register()">SignUp</button>
     </div>

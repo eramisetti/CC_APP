@@ -26,7 +26,7 @@ export class UserComponent implements OnInit {
     this.homeService.login(this.loginUser).subscribe(
        ( res: Boolean) => {
             if (res) {
-                this.router.navigate(['student/list']);
+                this.router.navigate(['home/list']);
             }
         }
     );
@@ -37,7 +37,7 @@ export class UserComponent implements OnInit {
       this.homeService.register(this.registerUser).subscribe(
         res => {
           console.log(res);
-          this.router.navigate(['student/list']);
+          this.router.navigate(['home/list']);
         }
       );
   }
