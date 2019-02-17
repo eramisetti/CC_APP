@@ -1,7 +1,3 @@
-create table user_roles(
-username varchar(100),
-role varchar(100)
-);
 
 create table user(
 	user_id BIGINT primary key not null,
@@ -22,9 +18,6 @@ create table user(
 	active BOOLEAN,
 	
 	CONSTRAINT user_name_unique UNIQUE (user_name),
-	CONSTRAINT user_company_unique UNIQUE (company_name),
 	CONSTRAINT user_cemail_unique UNIQUE (corp_email),
 	CONSTRAINT user_pemail_unique UNIQUE (personal_email)
 );
-
-CREATE SEQUENCE SEQ_user_id START WITH 100 INCREMENT BY 1;
