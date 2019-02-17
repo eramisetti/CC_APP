@@ -18,7 +18,7 @@ export class UserService {
             headers: httpHeaders
         };
 
-        return this.http.post<Boolean>('/api/user/login', data, options);
+        return this.http.post<Boolean>('/cc-app/api/user/login', data, options);
     }
 
      register(user: User): Observable<User> {
@@ -31,6 +31,6 @@ export class UserService {
             headers: httpHeaders
         };
 
-        return this.http.post<User>('/api/user/register', data, options);
+        return this.http.post<User>('/cc-app/api/user/register', data, options);
     }
 }
