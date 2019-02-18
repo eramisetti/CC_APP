@@ -1,6 +1,6 @@
 **/target/
 cc-web/src/main/web/dist/
 cc-web/src/main/web/node/
-cc-web/src/main/web/src/index.html
+cc-web/src/index.html
 cc-web/src/main/web/package-lock.json
 **/node_modules/
